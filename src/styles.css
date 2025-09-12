@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+code {
+  font-size: 1.2em;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+  margin-left: 10%;
+}
+
+.search-input {
+  padding: 13px;
+  margin: 5px;
+  margin-left: 3%;
+  border: 2pt rgb(222, 222, 222) solid;
+  border-radius: 10px;
+  font-size: 10pt;
+  width: 50%;
+}
+
+.search-input:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+
+.link-row {
+  padding: 7px;
+  list-style-type: none;
+  margin: 20px;
+  margin-left: 0;
+}
+
+.link-name {
+  font-size: 15pt;
+  text-decoration: none;
+  color:#043e7c;
+  padding: 0;
+  margin: 0;
+}
+.link-name:hover {
+  color:#d80303;
+}
+
+
+.link-link {
+  font-size: 10pt;
+  text-decoration: none;
+  margin: 0;
+  padding-top: 5px;
+  color: rgb(1, 85, 1);
+  font-weight: bold;
+}
+.link-link:hover {
+  color:#d80303;
+}
+
+.link-desc {
+  margin: 0;
+  padding-top: 5px;
+  font-size: 10pt;
+}
+
+.themes-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+
+}
+.theme {
+  margin: 0;
+  padding: 0;
+  font-size: 11pt;
+  display: inline-block;
+  padding-left: 5px;
+}
+
