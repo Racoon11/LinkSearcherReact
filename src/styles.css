@@ -22,34 +22,34 @@ ul {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: sans-serif; 
   margin: 20px;
   padding: 0;
   margin-left: 10%;
 }
 
 .search-input {
-  padding: 13px;
+  padding: 15px;
   margin: 5px;
   margin-left: 3%;
   border: 2pt rgb(222, 222, 222) solid;
   border-radius: 10px;
   font-size: 10pt;
-  width: 50%;
+  width: 90%;
 }
 
 .search-input:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #bdbdbd;
+  border-color: #7bccff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(106, 133, 255, 0.25);
 }
 
 .link-row {
   padding: 7px;
   list-style-type: none;
-  margin: 20px;
+  margin: 10px;
   margin-left: 0;
 }
 
@@ -69,7 +69,7 @@ body {
   font-size: 10pt;
   text-decoration: none;
   margin: 0;
-  padding-top: 5px;
+  padding-top: 0px;
   color: rgb(1, 85, 1);
   font-weight: bold;
 }
@@ -79,14 +79,14 @@ body {
 
 .link-desc {
   margin: 0;
-  padding-top: 5px;
+  padding-top: 0px;
   font-size: 10pt;
 }
 
 .themes-list {
   margin: 0;
   padding: 0;
-  padding-top: 5px;
+  padding-top: 0px;
 
 }
 .theme {
@@ -97,3 +97,73 @@ body {
   padding-left: 5px;
 }
 
+.choose-label {
+  padding-left: 30px;
+  padding-right: 5px;
+}
+
+/* Общие стили для select */
+select {
+    width: 50%;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    appearance: none; /* Убираем стандартную стрелку */
+    -webkit-appearance: none; /* Для Safari/Chrome */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Фокус — важная часть доступности */
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Ховер — для улучшения UX */
+select:hover:not(:disabled) {
+    border-color: #ccc;
+}
+
+/* Отключённое состояние */
+select:disabled {
+    background-color: #f9f9f9;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ddd;
+}
+
+/* Стилизация скроллбара в выпадающем списке (Chrome/Safari) */
+select::-webkit-scrollbar {
+    width: 6px;
+}
+select::-webkit-scrollbar-track {
+    background: transparent;
+}
+select::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+/* Для Firefox — убираем внутренние отступы */
+select::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/* Для Firefox — кастомная стрелка (если нужно) */
+select::-ms-expand {
+    display: none; /* Убирает стрелку в IE/Edge */
+}
+
+/* Если хочешь, чтобы select был фиксированной высоты — раскомментируй: */
+/* height: 44px; */
