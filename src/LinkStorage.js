@@ -15,11 +15,11 @@ export class LinkStorage {
             return []; // защита от невалидных входов
         }
         if (themeName === "none") {
-            return this.getAll();
+            return this.getVisibleLinks();
         }
 
         return this.links.filter(link =>
-            link.Themes && Array.isArray(link.Themes)
+            link.Themes && Array.isArray(link.Themes) && link.IsHidden === false
                 ? link.Themes.includes(themeName)
                 : false
         );
@@ -40,6 +40,10 @@ export class LinkStorage {
     getAll() {
         return [...this.links]; // возвращаем копию, чтобы нельзя было модифицировать напрямую
     }
+    getVisibleLinks() {
+        return this.links.filter(link => link.IsHidden === false);
+    }
+    
     getAt(index) {
         if (index < 0 || index >= this.links.length) {
             throw new Error(`Index ${index} is out of bounds`);

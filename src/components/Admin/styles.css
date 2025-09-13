@@ -1,0 +1,9 @@
+.edit-button {
+    margin-top: 15%;
+    border: none;
+    background-color: white;
+}
+
+.hidden {
+    color: grey;
+}
