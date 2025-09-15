@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import {ConfirmModal} from "./ConfirmModal";
 
 export function AdminLinkRow({ link, onDeleteButtonClick, setUrl, setName, setDesc, setThemesInput, setIsHidden, setLinkToEdit}) {
@@ -6,10 +6,10 @@ export function AdminLinkRow({ link, onDeleteButtonClick, setUrl, setName, setDe
     const [anchorPosition, setAnchorPosition] = useState(null);
     const buttonRef = useRef(null);
 
-    const handleDelete = () => {
+    const handleDelete = useCallback(() => {
         onDeleteButtonClick(link.Id);
         setIsMenuOpen(false);
-    };
+    }, []);
 
     const handleEdit = () => {
         setUrl(link.Link);
@@ -21,9 +21,9 @@ export function AdminLinkRow({ link, onDeleteButtonClick, setUrl, setName, setDe
         setLinkToEdit(link.Id);
     };
 
-    const handleClose = () => {
+    const handleClose = useCallback(() => {
         setIsMenuOpen(false);
-    };
+    }, []);
 
     document.addEventListener('click', () => {
         setIsMenuOpen(false);

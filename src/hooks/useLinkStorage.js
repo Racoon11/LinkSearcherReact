@@ -17,8 +17,6 @@ export function useLinkStorage() {
       const storage = LinkStorage.load();
       setLinks(storage.getAll());
     };
-
-
     window.addEventListener('storage', handleStorageChange);
     return () => window.removeEventListener('storage', handleStorageChange);
   }, []);

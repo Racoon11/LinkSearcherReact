@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {FilterableLinkList} from "./components/FilterableLinkList";
+import {FilterableLinkList} from "./components/Main/FilterableLinkList";
 import {AdminScreen} from "./components/Admin/AdminScreen";
-import {LINKS} from './Data';
 
 import { useLinkStorage } from './hooks/useLinkStorage';
 

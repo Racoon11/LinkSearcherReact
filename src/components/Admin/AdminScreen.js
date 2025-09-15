@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import {AdminLinkList} from "./AdminLinkList";
-import {LinkForm} from "./LinkForm";
+import { AdminLinkList } from "./AdminLinkList";
+import { LinkForm } from "./LinkForm";
 import "./styles.css";
 
 export function AdminScreen({ getAllLinks, removeLinkById, addLink, editLinkById }) {

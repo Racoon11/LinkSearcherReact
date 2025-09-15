@@ -1,0 +1,37 @@
+.link-row {
+  padding: 7px;
+  list-style-type: none;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.link-name {
+  font-size: 15pt;
+  text-decoration: none;
+  color:#043e7c;
+  padding: 0;
+  margin: 0;
+}
+.link-name:hover {
+  color:#d80303;
+}
+
+
+.link-link {
+  font-size: 10pt;
+  text-decoration: none;
+  margin: 0;
+  padding-top: 0px;
+  color: rgb(1, 85, 1);
+  font-weight: bold;
+}
+.link-link:hover {
+  color:#d80303;
+}
+
+.link-desc {
+  margin: 0;
+  padding-top: 0px;
+  font-size: 10pt;
+}
+

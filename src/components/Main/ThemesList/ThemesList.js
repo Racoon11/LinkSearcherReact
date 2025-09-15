@@ -1,3 +1,4 @@
+import "./styles.css";
 
 export function ThemesList({ themes }){
   const tlist = [];

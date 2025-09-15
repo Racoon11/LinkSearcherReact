@@ -6,9 +6,16 @@ export function AdminLinkList({ getAllLinks, removeLinkById,
     return (
         <div className="scrollable-container">
             <ul>
-                {getAllLinks().map((link) => <AdminLinkRow key={ link.Id } link={ link } onDeleteButtonClick={removeLinkById} 
-                setUrl={setUrl} setName={setName} setDesc={setDesc} setThemesInput={setThemesInput} setIsHidden={setIsHidden} 
-                setLinkToEdit={setLinkToEdit} />)} 
+                {getAllLinks().map((link) => <AdminLinkRow 
+                                                key={ link.Id } 
+                                                link={ link } 
+                                                onDeleteButtonClick={removeLinkById} 
+                                                setUrl={setUrl} 
+                                                setName={setName} 
+                                                setDesc={setDesc} 
+                                                setThemesInput={setThemesInput} 
+                                                setIsHidden={setIsHidden} 
+                                                setLinkToEdit={setLinkToEdit} />)} 
             </ul>
         </div>
     );

@@ -1,4 +1,5 @@
-import {ThemeInput} from "./ThemeInput";
+import {ThemeInput} from "../ThemeInput";
+import "./styles.css";
 
 export function SearchBar({themes,
                           filterTheme, 

@@ -1,4 +1,5 @@
-import { ThemesList } from "./ThemesList";
+import { ThemesList } from "../ThemesList/ThemesList";
+import "./styles.css";
 
 export function LinkRow({ link }) {
   return (

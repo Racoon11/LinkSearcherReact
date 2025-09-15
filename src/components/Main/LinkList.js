@@ -1,4 +1,4 @@
-import { LinkRow } from "./LinkRow";
+import { LinkRow } from "./LinkRow/LinkRow";
 
 export function LinkList({ getLinksByTheme, theme }){
   const rows = [];

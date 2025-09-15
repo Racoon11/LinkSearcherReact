@@ -1,4 +1,4 @@
-import {SearchBar} from "./SearchBar";
+import {SearchBar} from "./SearchBar/SearchBar";
 import {LinkList} from "./LinkList";
 import { useState } from "react";
 
