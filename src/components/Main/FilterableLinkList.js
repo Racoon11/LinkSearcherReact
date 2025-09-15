@@ -2,7 +2,7 @@ import {SearchBar} from "./SearchBar/SearchBar";
 import {LinkList} from "./LinkList";
 import { useState } from "react";
 
-export function FilterableLinkList({ getLinksByTheme, getAllThemes, addRatingById }) {
+export function FilterableLinkList({ getLinksByTheme, getAllThemes, addRatingById, logClick }) {
   const [filterTheme, setFilterTheme] = useState("none");
   return (
     <div className="container">
@@ -15,7 +15,8 @@ export function FilterableLinkList({ getLinksByTheme, getAllThemes, addRatingByI
           <LinkList 
             getLinksByTheme={getLinksByTheme} 
             theme={filterTheme} 
-            addRatingById={addRatingById}/>
+            addRatingById={addRatingById}
+            logClick={ logClick }/>
         </div>
       </div>
     </div>

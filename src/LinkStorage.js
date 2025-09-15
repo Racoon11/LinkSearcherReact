@@ -99,4 +99,5 @@ export class LinkStorage {
             return new LinkStorage();
         }
     }
+
 }

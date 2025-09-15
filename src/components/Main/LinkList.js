@@ -1,6 +1,6 @@
 import { LinkRow } from "./LinkRow/LinkRow";
 
-export function LinkList({ getLinksByTheme, theme, addRatingById }){
+export function LinkList({ getLinksByTheme, theme, addRatingById, logClick }){
   const rows = [];
 
   getLinksByTheme(theme).forEach((link) => {
@@ -8,7 +8,8 @@ export function LinkList({ getLinksByTheme, theme, addRatingById }){
       <LinkRow 
         link={link} 
         key={link.Id}
-        addRatingById={addRatingById} />
+        addRatingById={addRatingById}
+        logClick={ logClick } />
     );
   });
   return (

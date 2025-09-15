@@ -1,10 +1,11 @@
 import { ThemesList } from "../ThemesList/ThemesList";
 import "./styles.css";
 
-export function LinkRow({ link, addRatingById }) {
+export function LinkRow({ link, addRatingById, logClick }) {
   function linkClick(e) {
     e.preventDefault(); // отменяем стандартное поведение
     addRatingById(link.Id); // увеличиваем счётчик
+    logClick(link.Id);
     window.open(link.Link, '_blank'); 
   }
   return (
