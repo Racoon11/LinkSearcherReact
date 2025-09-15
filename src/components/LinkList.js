@@ -1,9 +1,9 @@
 import { LinkRow } from "./LinkRow";
 
-export function LinkList({ links, theme }){
+export function LinkList({ getLinksByTheme, theme }){
   const rows = [];
 
-  links.getLinksByTheme(theme).forEach((link) => {
+  getLinksByTheme(theme).forEach((link) => {
     rows.push(
       <LinkRow 
         link={link} 

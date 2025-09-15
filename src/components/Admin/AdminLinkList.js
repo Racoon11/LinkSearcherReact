@@ -1,9 +1,15 @@
 import {AdminLinkRow} from "./AdminLinkRow";
 
-export function AdminLinkList({ links }) {
+export function AdminLinkList({ getAllLinks, removeLinkById, 
+    setUrl, setName, setDesc, setThemesInput, setIsHidden, setLinkToEdit }) {
+
     return (
-        <ul>
-            {links.getAll().map((link) => <AdminLinkRow key={ link.Id } link={ link }/>)}
-        </ul>
+        <div className="scrollable-container">
+            <ul>
+                {getAllLinks().map((link) => <AdminLinkRow key={ link.Id } link={ link } onDeleteButtonClick={removeLinkById} 
+                setUrl={setUrl} setName={setName} setDesc={setDesc} setThemesInput={setThemesInput} setIsHidden={setIsHidden} 
+                setLinkToEdit={setLinkToEdit} />)} 
+            </ul>
+        </div>
     );
 }

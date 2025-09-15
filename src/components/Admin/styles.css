@@ -7,3 +7,116 @@
 .hidden {
     color: grey;
 }
+
+.admin-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+}
+
+.hide-div {
+    margin-top: 12px; 
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.context-menu {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border: 1px solid #eee;
+  font-size: 14px;
+  width: 15%; /* автоматическая ширина под содержимое */
+  overflow: hidden;
+  /* Убираем ширину в 13% — она была ошибкой */
+}
+
+.context-menu button {
+  width: 100%;
+  text-align: left;
+  padding: 8px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  margin: 0;
+  border-radius: 0;
+  transition: background-color 0.1s ease;
+}
+
+.context-menu button:hover {
+  background-color: #f8f9fa;
+}
+
+.context-menu button:first-of-type {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.context-menu button:nth-of-type(2) {
+  color: #dc3545; /* удалить — красный */
+}
+
+.context-menu button:nth-of-type(1) {
+  color: #007bff; /* редактировать — синий */
+}
+
+.context-menu button:last-of-type {
+  color: #6c757d; /* отмена — серый */
+}
+
+.scrollable-container {
+  /* Фиксированная высота — ключевое условие для скролла */
+  height: 700px;
+  
+  /* Включаем вертикальный скролл при переполнении */
+  overflow-y: auto;
+  
+  /* Горизонтальный скролл отключён (если не нужен) */
+  overflow-x: hidden;
+
+  /* Красивые границы и закругления */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #ffffff;
+
+  /* Для плавного скролла (Chrome, Safari) */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: #888 transparent;
+}
+
+/* Стилизация скроллбара в Chrome/Edge/Safari */
+.scrollable-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+/* Дополнительно: если хочешь, чтобы контент не "обрезался" */
+.scrollable-container > * {
+  margin-bottom: 8px;
+}
+
+.scrollable-container > *:last-child {
+  margin-bottom: 0;
+}
+
+.my-btn {
+  margin: 5px;
+}

@@ -24,12 +24,30 @@ export class LinkStorage {
                 : false
         );
     }
-    removeAt(index) {
-        if (index < 0 || index >= this.links.length) {
-            throw new Error(`Index ${index} is out of bounds`);
+
+    removeLinkById(id) {
+        const index = this.links.findIndex(link => link.Id === id);
+
+        if (index === -1) {
+            return false; // ссылка с таким ID не найдена
         }
-        this.links.splice(index, 1);
-        this.save(); // автоматически сохраняем
+
+        this.links.splice(index, 1); // удаляем один элемент по индексу
+        this.save(); // автоматически сохраняем в localStorage
+        return true; // успех!
+    }
+    editLinkById(id, link='', name = '', desc = '', themes = [], isHidden = false) {
+        const oLink = this.getLinkById(id);
+        oLink.Link = link;
+        oLink.Name = name;
+        oLink.Description = desc;
+        oLink.Themes = themes;
+        oLink.isHidden = isHidden;
+        this.save();
+    }
+    
+    getLinkById(id) {
+        return this.links.find(link => link.Id === id) || null;
     }
 
     getAllThemes() {
@@ -42,13 +60,6 @@ export class LinkStorage {
     }
     getVisibleLinks() {
         return this.links.filter(link => link.IsHidden === false);
-    }
-    
-    getAt(index) {
-        if (index < 0 || index >= this.links.length) {
-            throw new Error(`Index ${index} is out of bounds`);
-        }
-        return this.links[index];
     }
 
     size() {
