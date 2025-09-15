@@ -42,7 +42,13 @@ export class LinkStorage {
         oLink.Name = name;
         oLink.Description = desc;
         oLink.Themes = themes;
-        oLink.isHidden = isHidden;
+        oLink.IsHidden = isHidden;
+        this.save();
+    }
+
+    addRatingById(id) {
+        const oLink = this.getLinkById(id);
+        oLink.rating += 1;
         this.save();
     }
     

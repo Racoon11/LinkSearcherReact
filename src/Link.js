@@ -1,6 +1,6 @@
 export class Link {
     static next_id = 1;
-    constructor(link, name='', desc='', themes=[], isHidden=false) {
+    constructor(link, name='', desc='', themes=[], isHidden=false, rating=0) {
         this.Id = Link.next_id;
         Link.next_id += 1;
         this.Link = link;
@@ -9,6 +9,7 @@ export class Link {
         this.Name = name;
         this.Description = desc;
         this.IsHidden = isHidden; 
+        this.rating = rating;
     }
 
     // toJSON: сериализует объект в JSON-совместимый формат
@@ -19,7 +20,8 @@ export class Link {
             Name: this.Name,
             Description: this.Description,
             Themes: this.Themes,
-            IsHidden: this.IsHidden
+            IsHidden: this.IsHidden,
+            rating: this.rating
         };
     }
 
@@ -30,7 +32,8 @@ export class Link {
             data.Name,
             data.Description,
             data.Themes,
-            data.IsHidden
+            data.IsHidden,
+            data.rating
         );
         // ВАЖНО: переопределяем Id из сохранённых данных — чтобы не конфликтовало!
         link.Id = data.Id;

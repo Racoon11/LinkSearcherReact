@@ -8,7 +8,7 @@ export function SearchBar({themes,
   return (
     <form>
       <input className='search-input' type='text' placeholder='Search links...'/>
-      <label className="choose-label" for="theme-select">Choose theme:</label>
+      <label className="choose-label" htmlFor="theme-select">Choose theme:</label>
       <select id="theme-select" value={ filterTheme } onChange={(e) => onFilterThemeChange(e.target.value) }>
           <option value="none">None</option>
           { themes.map((theme) => <ThemeInput name={ theme } key={ theme } />) }

@@ -5,7 +5,7 @@
 }
 
 .hidden {
-    color: grey;
+    color: grey !important;
 }
 
 .admin-input {
@@ -119,4 +119,11 @@
 
 .my-btn {
   margin: 5px;
+}
+
+.link-rating {
+  margin: 0;
+  padding-top: 0px;
+  font-size: 11pt;
+  color:#ae1b36; 
 }

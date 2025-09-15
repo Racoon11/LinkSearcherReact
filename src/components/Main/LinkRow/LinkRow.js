@@ -1,11 +1,16 @@
 import { ThemesList } from "../ThemesList/ThemesList";
 import "./styles.css";
 
-export function LinkRow({ link }) {
+export function LinkRow({ link, addRatingById }) {
+  function linkClick(e) {
+    e.preventDefault(); // отменяем стандартное поведение
+    addRatingById(link.Id); // увеличиваем счётчик
+    window.open(link.Link, '_blank'); 
+  }
   return (
     <li className='link-row'>
-      <a className='link-name' href={ link.Link }>{ link.Name }</a><br/>
-      <a className='link-link'  href={ link.Link }>{ link.Link }</a>
+      <a className='link-name' href={ link.Link } onClick={(e) => linkClick(e)}>{ link.Name }</a><br/>
+      <a className='link-link'  href={ link.Link } onClick={(e) => linkClick(e)}>{ link.Link }</a>
       <p className='link-desc'>{ link.Description }</p>
       <ThemesList themes={link.Themes} />
     </li>

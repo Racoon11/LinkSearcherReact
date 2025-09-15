@@ -52,6 +52,7 @@ export function AdminLinkRow({ link, onDeleteButtonClick, setUrl, setName, setDe
                         <ul className='themes-list'>
                             { link.Themes.map((theme) => <li key={theme} className='theme'>#{theme}</li>) }
                         </ul>
+                        <p className={ `link-rating ${link.IsHidden ? "hidden" : ""} `}>Rating: {link.rating}</p>
                     </li>
                 </div>
                 <div className="col-2">

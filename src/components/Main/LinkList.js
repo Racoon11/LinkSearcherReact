@@ -1,13 +1,14 @@
 import { LinkRow } from "./LinkRow/LinkRow";
 
-export function LinkList({ getLinksByTheme, theme }){
+export function LinkList({ getLinksByTheme, theme, addRatingById }){
   const rows = [];
 
   getLinksByTheme(theme).forEach((link) => {
     rows.push(
       <LinkRow 
         link={link} 
-        key={link.Id} />
+        key={link.Id}
+        addRatingById={addRatingById} />
     );
   });
   return (

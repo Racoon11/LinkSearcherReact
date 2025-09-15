@@ -27,13 +27,19 @@ export function useLinkStorage() {
     const newLink = storage.addLink(link, name, desc, themes, isHidden);
     setLinks(storage.getAll()); // обновляем состояние
     return newLink;
-  };
+  }; 
   const editLinkById = (id, link='', name = '', desc = '', themes = [], isHidden = false) => {
     const storage = LinkStorage.load(); // загружаем актуальные данные
     storage.editLinkById(id, link, name, desc, themes, isHidden);
     setLinks(storage.getAll());
     return ;
   }
+
+  const addRatingById = (id) => {
+    const storage = LinkStorage.load();
+    storage.addRatingById(id);
+    setLinks(storage.getAll());
+  };
 
   // Обёртка над removeLinkById — обновляет состояние
   const removeLinkById = (id) => {
@@ -77,5 +83,6 @@ export function useLinkStorage() {
     getLinkById,
     getAllLinks,
     editLinkById,
+    addRatingById
   };
 }

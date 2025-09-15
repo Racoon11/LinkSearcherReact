@@ -109,13 +109,13 @@ export function LinkForm({ addLink, url, name, desc, themesInput, isHidden,
         {/* Кнопка */}
         <button
             onClick={handleAdd}
-            type="submit"
+            type="button"
             className='btn btn-primary my-btn'>
             Add link
         </button>
         <button
             onClick={handleEdit}
-            type="submit"
+            type="button"
             className='btn btn-primary my-btn'
             style={{ display:  linkToEdit !== 'none' ? 'inline' :'none'}}
             >
