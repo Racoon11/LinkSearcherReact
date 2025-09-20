@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {FilterableLinkList} from "./components/Main/FilterableLinkList";
 import {AdminScreen} from "./components/Admin/AdminScreen";
 import { LogScreen } from './components/Logs/LogScreen';
+import { LoginScreen } from './components/Login/LoginScreen';
 
 import { useLinkStorage } from './hooks/useLinkStorage';
+import { ProtectedRoute } from './ProtectedRoute';
 
 export default function App() {
   const { getLinksByTheme, getAllThemes, getAllLinks, 
@@ -13,17 +15,28 @@ export default function App() {
   return (
     <Router>
         <Routes>
-          <Route path="/" element={<FilterableLinkList 
-                                      getLinksByTheme={getLinksByTheme} 
-                                      getAllThemes={getAllThemes} 
-                                      addRatingById={addRatingById}
-                                      logClick={logClick} />} />
-          <Route path="/admin" element={<AdminScreen 
-                                          getAllLinks={getAllLinks} 
-                                          removeLinkById={removeLinkById} 
-                                          addLink={ addLink } 
-                                          editLinkById={editLinkById} />} />
-          <Route path="/admin/logs" element={<LogScreen />}/>
+          <Route path="/" element={
+            <FilterableLinkList 
+              getLinksByTheme={getLinksByTheme} 
+              getAllThemes={getAllThemes}
+              addRatingById={addRatingById}
+              logClick={logClick} />} />
+          <Route path="/admin" element={
+            <ProtectedRoute>
+              <AdminScreen 
+                getAllLinks={getAllLinks} 
+                removeLinkById={removeLinkById} 
+                addLink={ addLink } 
+                editLinkById={editLinkById} />
+            </ProtectedRoute>
+          } />
+          <Route path="/admin/logs" element={
+            <ProtectedRoute>
+              <LogScreen />
+            </ProtectedRoute>
+          }/>
+          
+          <Route path="/login" element={<LoginScreen />} />
         </Routes>
     </Router>
   );
