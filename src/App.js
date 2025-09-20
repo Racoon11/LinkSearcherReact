@@ -15,13 +15,13 @@ export default function App() {
   return (
     <Router>
         <Routes>
-          <Route path="/linksearcherreact" element={
+          <Route path="/LinkSearcherReact" element={
             <FilterableLinkList 
               getLinksByTheme={getLinksByTheme} 
               getAllThemes={getAllThemes}
               addRatingById={addRatingById}
               logClick={logClick} />} />
-          <Route path="/linksearcherreact/admin" element={
+          <Route path="/LinkSearcherReact/admin" element={
             <ProtectedRoute>
               <AdminScreen 
                 getAllLinks={getAllLinks} 
@@ -30,13 +30,13 @@ export default function App() {
                 editLinkById={editLinkById} />
             </ProtectedRoute>
           } />
-          <Route path="/linksearcherreact/admin/logs" element={
+          <Route path="/LinkSearcherReact/admin/logs" element={
             <ProtectedRoute>
               <LogScreen />
             </ProtectedRoute>
           }/>
           
-          <Route path="/linksearcherreact/login" element={<LoginScreen />} />
+          <Route path="/LinkSearcherReact/login" element={<LoginScreen />} />
         </Routes>
     </Router>
   );

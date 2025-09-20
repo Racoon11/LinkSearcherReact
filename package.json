@@ -2,7 +2,7 @@
   "name": "react.dev",
   "version": "0.0.0",
   "main": "/src/index.js",
-  "homepage": "https://racoon11.github.io/linksearcherreact",
+  "homepage": "https://racoon11.github.io/LinkSearcherReact",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
