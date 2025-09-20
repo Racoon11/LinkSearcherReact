@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/linksearcherreact/static/css/main.117764cb.css",
+    "main.js": "/linksearcherreact/static/js/main.975504bb.js",
+    "index.html": "/linksearcherreact/index.html",
+    "main.117764cb.css.map": "/linksearcherreact/static/css/main.117764cb.css.map",
+    "main.975504bb.js.map": "/linksearcherreact/static/js/main.975504bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.117764cb.css",
+    "static/js/main.975504bb.js"
+  ]
+}
