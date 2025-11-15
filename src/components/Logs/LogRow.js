@@ -1,4 +1,4 @@
-import { parseISODate } from "../../ParseIsoDate";
+import { parseISODate } from "../../help/ParseIsoDate";
 import "./styles.css";
 export function LogRow({ log }) {
     const datetime = parseISODate(log.timestamp);

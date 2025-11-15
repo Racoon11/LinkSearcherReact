@@ -1,12 +1,19 @@
 import {LogRow} from "./LogRow";
 import {JsonIcon} from "./JsonIcon";
-import {exportClickLogs} from "../../ParseLogs";
+import {exportClickLogs} from "../../help/ParseLogs";
+import { useNavigate } from 'react-router-dom';
 
 export function LogScreen() {
+    const navigate = useNavigate();
     const storedLogs = localStorage.getItem('clickLogs');
     let mylogs = storedLogs ? JSON.parse(storedLogs) : [];
     return (
         <div>
+            <button
+                className='btn btn-primary my-btn'
+                onClick={() => navigate("/LinkSearcherReact/admin")}
+                > back 
+            </button>
             <button className="icon-btn" onClick={exportClickLogs}><JsonIcon /></button>
             <table className="table table-light  table-striped">
                 <thead>

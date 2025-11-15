@@ -6,7 +6,7 @@ import { LogScreen } from './components/Logs/LogScreen';
 import { LoginScreen } from './components/Login/LoginScreen';
 
 import { useLinkStorage } from './hooks/useLinkStorage';
-import { ProtectedRoute } from './ProtectedRoute';
+import { ProtectedRoute } from './components/Main/ProtectedRoute';
 
 export default function App() {
   const { getLinksByTheme, getAllThemes, getAllLinks, 

@@ -2,8 +2,10 @@ import { useState } from 'react';
 import { AdminLinkList } from "./AdminLinkList";
 import { LinkForm } from "./LinkForm";
 import "./styles.css";
+import { useNavigate } from 'react-router-dom';
 
 export function AdminScreen({ getAllLinks, removeLinkById, addLink, editLinkById }) {
+    const navigate = useNavigate();
     const [url, setUrl] = useState('');
     const [name, setName] = useState('');
     const [desc, setDesc] = useState('');
@@ -23,6 +25,12 @@ export function AdminScreen({ getAllLinks, removeLinkById, addLink, editLinkById
                     <LinkForm addLink={addLink} url={url} name={name} desc={desc} themesInput={themesInput} isHidden={isHidden}
                      setUrl={setUrl} setName={setName} setDesc={setDesc} setThemesInput={setThemesInput} setIsHidden={setIsHidden}
                      linkToEdit={linkToEdit} setLinkToEdit={setLinkToEdit} editLinkById={editLinkById}/>
+
+                     <button
+                        className='btn btn-primary my-btn'
+                        onClick={() => navigate("/LinkSearcherReact/admin/logs")}
+                     > logs </button>
+
                 </div>
             </div>
         </div>

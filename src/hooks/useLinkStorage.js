@@ -1,6 +1,6 @@
 // hooks/useLinkStorage.js
 import { useState, useEffect } from 'react';
-import { LinkStorage } from '../LinkStorage.js';
+import { LinkStorage } from '../help/LinkStorage.js';
 
 export function useLinkStorage() {
   const [links, setLinks] = useState([]);

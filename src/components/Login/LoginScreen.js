@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { generateToken, setToken } from "../../auth";
+import { generateToken, setToken } from "../../help/auth";
 import { useNavigate } from 'react-router-dom';
 
 export function LoginScreen() {
@@ -21,7 +21,7 @@ export function LoginScreen() {
         if (username === 'admin' && password === 'admin') {
             const token = generateToken();
             setToken(token);
-            navigate('/admin'); // перенаправляем на главную
+            navigate('/LinkSearcherReact/admin'); // перенаправляем на главную
         } else {
             setError('Incorrect login or password');
         }
